@@ -3,6 +3,7 @@ package practice.dsa;
 public class ArrayQueue {
     public static void main(String[] args) {
         ArrayQueue queue = new ArrayQueue(4);
+        queue.dequeue();
         queue.enqueue(2);
         queue.enqueue(4);
         queue.enqueue(3);

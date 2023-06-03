@@ -1,23 +1,21 @@
 package practice.random;
 
-import java.time.Instant;
-import java.time.LocalDate;
-import java.time.ZoneOffset;
-import java.util.Date;
+import java.util.ArrayDeque;
+import java.util.Deque;
+import java.util.regex.Pattern;
 
 public class TimeTester {
+    private static final Pattern invalidPattern = Pattern.compile(".*//.*");
+    
     public static void main(String[] args) {
-        //long timeEpoch = 1583151761699L;
-        Instant monthStartDate = LocalDate.now().withDayOfMonth(1).atStartOfDay().toInstant(ZoneOffset.UTC);
-        Thread thread = new Thread();
-        Date date = Date.from(monthStartDate);
-        System.out.println("Month start: "+ date);
+        Deque<Integer> deque = new ArrayDeque<>();
 
-//        System.out.println("Date: "+ date);
-//
-//        Duration duration = Duration.ofSeconds(3600);
-//        Date startTime = Date.from(date.toInstant().minusSeconds(10));
-//        System.out.println("StartDate: "+startTime);
+        String path = "//                     sting/path/aodak/file.txt  /";
+        path.contains("");
+        if(invalidPattern.matcher(path).matches()){
+            System.out.println("Invalid path");
+        }else
+            System.out.println("valid path");
     }
 
 
